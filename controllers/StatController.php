@@ -4,7 +4,7 @@ namespace backend\modules\chart\controllers;
 
 use yii\web\Controller;
 use yii\db\ActiveRecord;
-
+use Yii;
 /**
  * Stat controller for the `chart` module
  */
@@ -16,7 +16,7 @@ class StatController extends Controller
      */
     public function actionIndex($type = 'Article', $nm = 'common\models', $id = null, $field = 'created_at', $time_type = 1)
     {
-        $dateRange = getParam('date_range', date('Y-m-d', strtotime('-7 day')) . '-' . date('Y-m-d'));
+        $dateRange = Yii::$app->request->get('date_range', date('Y-m-d', strtotime('-7 day')) . '-' . date('Y-m-d'));
         $fromDate = strtotime(substr($dateRange, 0, 10));
         $toDate = strtotime(substr($dateRange, 11));
         $arrLabel = [];
