@@ -45,6 +45,15 @@ Add following lines to your main configuration file:
 
 ## Statistic data
 
+Build Stat Url
+```php
+    <?php echo Html::a('Chart', ['/chart/stat', 'type' => 'Article', 'nm' => 'common\models', 'id' => null, 'field' => 'created_at', 'time_type' => 2], ['class' => 'btn btn-info']) ?>
+```
+
+Screenshot
+
+![Demo Chart](https://cdn.filestackcontent.com/ft9WYYI0QxybbVU42Qae)
+
 
 ## Todo 
 
