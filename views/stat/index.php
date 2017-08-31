@@ -10,6 +10,7 @@ use yii\widgets\ActiveForm;
 /* @var $arrLabel array */
 /* @var $arrDataset array */
 /* @var $type */
+/* @var $nm */
 /* @var $id */
 /* @var $field */
 /* @var $time_type */
