@@ -1,0 +1,33 @@
+{
+  "name": "dungphanxuan/yii2-model-stat",
+  "description": "Flexible Statistic data module for Yii 2",
+  "keywords": [
+    "yii2",
+    "yii2-chart",
+    "statistic",
+    "dungphanxuan"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/dungphanxuan/yii2-model-stat/issues?state=open",
+    "source": "https://github.com/dungphanxuan/yii2-model-stat"
+  },
+  "authors": [
+    {
+      "name": "Dung Phan Xuan",
+      "email": "dungphanxuan999@gmail.com",
+      "homepage": "http://yiiframework.vn"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "^2.0.0",
+    "2amigos/yii2-chartjs-widget": "~2.0",
+    "kartik-v/yii2-date-range": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "dungphanxuan\\chart\\": ""
+    }
+  }
+}
