@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = 'Stat Chart';
                                 ])
                                 ?>
                                 <?= Html::hiddenInput('type', $type) ?>
+                                <?= Html::hiddenInput('nm', $nm) ?>
                                 <?= Html::hiddenInput('id', $id) ?>
                                 <?= Html::hiddenInput('field', $field) ?>
                                 <?= Html::hiddenInput('time_type', $time_type) ?>

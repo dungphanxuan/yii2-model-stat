@@ -1,10 +1,11 @@
 <?php
 
-namespace backend\modules\chart\controllers;
+namespace dungphanxuan\chart\controllers;
 
-use yii\web\Controller;
-use yii\db\ActiveRecord;
 use Yii;
+use yii\db\ActiveRecord;
+use yii\web\Controller;
+
 /**
  * Stat controller for the `chart` module
  */
@@ -21,6 +22,7 @@ class StatController extends Controller
         $toDate = strtotime(substr($dateRange, 11));
         $arrLabel = [];
         $dataDate = [];
+
 
         while ($fromDate <= $toDate) {
 
@@ -55,18 +57,18 @@ class StatController extends Controller
             'arrLabel'   => $arrLabel,
             'arrDataset' => $arrDataset,
             'type'       => $type,
+            'nm'         => $nm,
             'id'         => $id,
             'field'      => $field,
             'time_type'  => $time_type,
         ]);
     }
 
-    protected function getDateRange($time, $type)
+    protected function getDateRange($time, $type = 1)
     {
         $beginStr = '';
         $endStr = '';
-
-        if ($type == 1) {
+        if ((int)$type == 1) {
             $beginStr = $beginOfDay = strtotime("midnight", $time);
             $endStr = strtotime("tomorrow", $beginOfDay) - 1;
         } else {

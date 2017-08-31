@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\chart\controllers;
+namespace dungphanxuan\chart\controllers;
 
 use yii\web\Controller;
 
